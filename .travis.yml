@@ -4,7 +4,7 @@ node_js:
 services:
   - docker
 
-scripts:
+script:
   - echi "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t einyao/use-dockerfile:1.0.0
   - docker push einyao/use-dockerfile:1.0.0
